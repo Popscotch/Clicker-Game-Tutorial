@@ -4,7 +4,7 @@ Now that we have a button that can increase our clicks, lets make something that
 
 ### Step 1
 
-First, in our `scripts.js` file, and below  `let clicks = 0;`, let's add an new variable that keeps track of our `clicksPerSecond` so we have something like below:
+First, in our `scripts.js` file, and below `let clicks = 0;`, let's add an new variable that keeps track of our `clicksPerSecond` so we have something like below:
 
 ```js
 let clicks = 0;
@@ -35,7 +35,7 @@ To do this, go into your `scripts.js` file, and start with adding this at the bo
 
 ```JS
 function buyAutoClicker() {
-
+    // empty function
 }
 ```
 
@@ -101,6 +101,6 @@ function init() {
 }
 ```
 
-Congratulations! Your number of clicsk should now go up faster and faster the more 'Auto Clickers` you have!
+Congratulations! Your number of clicks should now go up faster and faster the more 'Auto Clickers` you have!
 
 ## Chapter 3
