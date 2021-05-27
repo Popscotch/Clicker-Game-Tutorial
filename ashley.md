@@ -101,6 +101,40 @@ function init() {
 }
 ```
 
-Congratulations! Your number of clicsk should now go up faster and faster the more 'Auto Clickers` you have!
+Congratulations! Your number of `clicks` should now go up faster and faster the more 'Auto Clickers' you have!
 
 ## Chapter 3
+
+The idea of clicker games is that you purchase generators to produce more resources so that you can purchase even more generators that produce even more resources et cetera et cetra.
+
+We're going to generalise our Auto Clicker using a `class`, and then making another generator that's both more powerful and expensive.
+
+### Step 1
+
+Make a class:
+```JS
+class Generator {
+    constructor(name, price, power) {
+        this.name = name
+        this.price = price
+        this.power = power
+        this.quantity = 0
+    }
+
+    
+}
+```
+
+### Step 3
+Change buyAutoClicker
+```JS
+function buyAutoClicker() {
+    clicksPerSecond = clicksPerSecond + 1;
+}
+```
+
+TODO: Inventory:
+
+TODO: Clicks per second function
+
+TODO: Also a price function
