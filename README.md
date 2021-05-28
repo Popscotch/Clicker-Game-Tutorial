@@ -439,13 +439,13 @@ Don't forget to refresh your browser so you can see the changes you've made!
 ## Chapter 5 - Extensions
 
 ### Step 1 - Save and Load game
-For saving the game, we will use Local Storage mechanism.
+For saving the game, we will utilise Internet Browser's Local Storage mechanism.
 
-According to Wikipedia, Local Storage (also known as DOM storage) provides web apps with methods and protocols for storing client-side data. It is cross-tab storage, meaning you can save data in one tab and have access to it in another or even after you refresh the page!
+**Local Storage** - (some times also called DOM Storage) provides functionality for saving data on the client-side (within the browser). This means that you can save data in one tab and have access to it in another or even after you refresh the page!
 
 Sounds cool right? Let's try it out :)
 
-Firstly, let's create 3 new buttons in our `index.html` page. A button to Save, Load and Clear data.
+Firstly, let's create 3 new buttons in our `index.html` page. A button to Save, Load and Clear.
 
 Add the following anywhere within the `<body>` tags:
 ```html
@@ -454,7 +454,7 @@ Add the following anywhere within the `<body>` tags:
 <button onClick="clearClicks()">Clear</button>
 ```
 
-Let's create `save()`, `load()` and `clearClicks()` buttons to handle the Save, Load and Clear data functionality precisely.
+Let's create `save()`, `load()` and `clearClicks()` functions to call when the Save, Load and Clear buttons are clicked.
 ```js
 function save() {
     window.localStorage.setItem('clicks', clicks);
