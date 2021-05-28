@@ -20,7 +20,7 @@ Click on the green "Code" button
 
 Click on 'Download ZIP' and save it to a location on the desktop.
 
-![Image](https://github.com/Popscotch/Clicker-Game-Tutorial/blob/070615562e874536c6e8c8f37765302d59f6d6db/Intro%201.png)
+![Image](./img/Intro%201.png)
 
 ### Step 3 
 Unzip the folder.
@@ -28,9 +28,9 @@ Unzip the folder.
 ### Step 4
 Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Next, navigate to where you un-zipped the folder and open it.  You should now have four files under the explorer window.
 
-![Image](https://github.com/Popscotch/Clicker-Game-Tutorial/blob/070615562e874536c6e8c8f37765302d59f6d6db/Intro%202.png)
+![Image](./img/Intro%202.png)
 
-![Image](https://github.com/Popscotch/Clicker-Game-Tutorial/blob/070615562e874536c6e8c8f37765302d59f6d6db/Intro%203.png)
+![Image](./img/Intro%203.png)
 
  All code will be located in the `/src` folder. Expand it now, and we'll see that this folder contains 3 files: `index.html` - the HTML file, `styles.css` - the CSS file and `scripts.js` - the JavaScript file. 
 
