@@ -343,6 +343,41 @@ Now you should have the foundations of a clicker game!
 
 Now that we've got our game working, it's time to make it look better. To do this we're going to revisit our styles.css sheet, which tells our browser how each element of our HTML page should be displayed.
 
+### Step 1
+To get us started, copy the below code into the file labelled 'styles.css'. 
+
+```CSS
+html {
+    font-family: "Comic Sans", "Comic Sans", cursive;
+    font-weight: bold;
+    font-size: large;
+}
+
+h1 {
+    text-align: center;
+}
+
+.clicker {
+    font-size: 128px;
+    display: block;
+    margin: auto;
+}
+
+.clicks {
+    text-align: center;
+}
+
+.clicksPerSecond {
+    text-align: center;
+}
+
+.generators {
+    /* display: block; */
+    /* margin: auto; */
+    text-align: center;
+}
+```
+
 Some of the quickest ways you can personalise your website is by changing how the writing looks, so let's update the font style and add some color. 
  
 You might have noticed that in the styles page we gave you there's a section of code that looks like this:
