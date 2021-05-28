@@ -80,11 +80,24 @@ function buyAutoClicker() {
 }
 ```
 
-Whenever that button is pressed, the code within the curly brackets of this function will be ran. The goal is to increase `clicksPerSecond` so that value can be used to increase `clicks`:
+Whenever that button is pressed, the code within the curly brackets of this function will be ran. The goal is to increase `clicksPerSecond` so that value can be used to increase `clicks`. Also include the `update()` function, itwill be helpful for later for updating the text on the page itself.
 
 ```JS
 function buyAutoClicker() {
     clicksPerSecond = clicksPerSecond + 1;
+	update();
+}
+```
+
+To make the 'Auto Clicker' cost 10 'clicks', expand the function using an `if` statement to implement that logic to test if the player can afford it, and if so, remove 10 `clicks` from the player:
+
+```JS
+function buyAutoClicker() {
+	if (clicks >= 10) {
+    	clicksPerSecond = clicksPerSecond + 1;
+		clicks = click - 10;
+		update();
+	}
 }
 ```
 
@@ -175,17 +188,24 @@ var generators = [
 ];
 ```
 
-What's happening here, is that we've created a class with a `constructor`, a constructor is a function that is called when the class is made. In our `generators` list, we're create a new generator, and telling it that the name is 'Auto Clicker', the price is '10', and it's power is '1'.
+What's happening here, is that you've created a class with a `constructor`, a constructor is a function that is called when the class is made. In the `generators` list, it's creating a new generator, and telling it that the name is 'Auto Clicker', the price is '10', and it's power is '1' as per the `constructor` function within the class definition.
 
 ### Step 3
 
+You'll need to update some of your previous code to make use of these changes. In the code, `generators[0]` represents the first item in the `generators` list. The 0 represents the `index`, and you can refer to other generators you might add by increasing that number. (Such as `generators[1]` for the second item, if there is one)
 
+```JS
+function buyAutoClicker() {
+	if (clicks >= generators[0].price) {
+    	clicksPerSecond = clicksPerSecond + generators[0].power;
+		clicks = click - generators[0].price;
+		update();
+	}
+}
+```
 
-TODO: Inventory:
+By using `generators[0].price` and `generators[0].power`, you're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating ourselves constantly.
 
-TODO: Clicks per second function
-
-TODO: Also a price function
 
 ## Chapter 4
 
