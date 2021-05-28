@@ -59,7 +59,7 @@ let clicksPerSecond = 0;
 Next, you need to make a button in your `index.html` file to increase the clicksPerSecond value by 1 each time it is pressed. So add this between the `<body>` tags in your `index.html` file:
 
 ```html
-<button onClick="buyAutoClicker()">Buy Auto Clicker</button>
+<button onClick="buyAutoClicker()">Buy Auto Clicker - 10 Clicks</button>
 ```
 
 Then you also need to add an element that will tell you what your current `clicksPerSecond` is. Also add this between the `<body>` tags:
@@ -170,9 +170,10 @@ Let's define a 'generator' class. This is what represents a generator, and we'll
 ```JS
 class Generator {
     constructor(name, price, power) {
-        this.name = name
-        this.price = price
-        this.power = power
+        this.name = name;
+        this.price = price;
+        this.power = power;
+	this.quantity = 0;
     }
 }
 ```
@@ -195,17 +196,41 @@ You'll need to update some of your previous code to make use of these changes. I
 
 ```JS
 function buyAutoClicker() {
-	if (clicks >= generators[0].price) {
+    if (clicks >= generators[0].price) {
     	clicksPerSecond = clicksPerSecond + generators[0].power;
-		clicks = click - generators[0].price;
-		update();
-	}
+        clicks = clicks - generators[0].price;
+        generators[0].quantity++; // This increases 'quantity' by 1
+        update();
+    }
 }
 ```
 
 By using `generators[0].price` and `generators[0].power`, you're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating ourselves constantly.
 
 ### Step 4
+
+Typically, in idle games, the more you purchase a generator, the more expensive it gets. The best way to do this is to create a function that will tell you the price of a generator. To do that, add this to your `scripts.js` file:
+
+```js
+function price(generator) { 
+    return Math.pow(generator.price, 1 + (0.1 * generator.quantity))
+}
+```
+
+This function has a parameter that has been named `generator`. To use it, you would do something like `price(generators[0])`. Your `buyAutoClicker()` function can be changed to use it like below, subsituting `generators[0].price` for `price(generators[0])`.
+
+```JS
+function buyAutoClicker() {
+    if (clicks >= price(generators[0]) {
+    	clicksPerSecond = clicksPerSecond + generators[0].power;
+        clicks = clicks - price(generators[0];
+        generators[0].quantity++; // This increases 'quantity' by 1
+        update();
+    }
+}
+```
+
+### Step 5
 
 See if you can make another new generator, a `Super Clicker` perhaps. To do this, you'll need to do the following:
 
