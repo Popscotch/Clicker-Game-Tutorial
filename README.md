@@ -43,11 +43,11 @@ TODO: Max's
 
 ## Chapter 2 - Generating more clicks!
 
-Now that we have a button that can increase our clicks, lets make something that can help us generate clicks without having to click ourselves, an "Auto Clicker"!
+Now that you have a button that can increase your 'clicks', now it's time to make something that can help us generate clicks over time without having to click ourselves, an "Auto Clicker"!
 
 ### Step 1
 
-First, in our `scripts.js` file, and below `let clicks = 0;`, let's add an new variable that keeps track of our `clicksPerSecond` so we have something like below:
+First, in our `scripts.js` file, and below `let clicks = 0;`, add a new variable that keeps track of our `clicksPerSecond` like so:
 
 ```js
 let clicks = 0;
@@ -56,25 +56,23 @@ let clicksPerSecond = 0;
 
 ### Step 2
 
-Next, we need to make a button in our `index.html` file to increase the clicksPerSecond by 1 each time it is pressed. So add this above the `<script>` line in the html.
+Next, you need to make a button in your `index.html` file to increase the clicksPerSecond value by 1 each time it is pressed. So add this between the `<body>` tags in your `index.html` file:
 
 ```html
 <button onClick="buyAutoClicker()">Buy Auto Clicker</button>
 ```
 
-We also need to add a `html` element that will tell us what our current `clicksPerSecond` is. So also add this above the button:
+Then you also need to add an element that will tell you what your current `clicksPerSecond` is. Also add this between the `<body>` tags:
 
 ```html
 <p>Clicks per second: <span id='clicksPerSecond'>0</span></p>
 ```
 
-This will just look like a single line of text, but this way we can use JavaScript to change the `<span>` specifically.
+This will just look like a single line of text when you view your page, but this way you can use JavaScript to change the `<span>` specifically, rather than te entire line.
 
 ### Step 3
 
-We've made the button, and we've told it to run `buyAutoClicker()` when it is clicked with the `onClick` attribute. But we still need to define what `buyAutoClicker()` really is. 
-
-To do this, go into your `scripts.js` file, and start with adding this at the bottom of the file:
+You've made the button, and You've told it to do `buyAutoClicker()` when it is clicked with the `onClick` attribute. But you still need to define what `buyAutoClicker()` really does. To do this, go into your `scripts.js` file, and start with adding this at the bottom of the file:
 
 ```JS
 function buyAutoClicker() {
@@ -82,7 +80,7 @@ function buyAutoClicker() {
 }
 ```
 
-Whenever our button is pressed, the code within the curly brackets of this function will run. We want to increase our `clicksPerSecond`, lets increase that by one:
+Whenever that button is pressed, the code within the curly brackets of this function will be ran. The goal is to increase `clicksPerSecond` so that value can be used to increase `clicks`:
 
 ```JS
 function buyAutoClicker() {
@@ -92,7 +90,7 @@ function buyAutoClicker() {
 
 ### Step 4
 
-We need to update our `update()` function so that our page will update when we increase our `clicksPerSecond`. Like before, we have to set the innerHTML of our `Clicks per second` line whenever something changes. 
+You next need to update the `update()` function so that the page will update when the `clicksPerSecond` value changes. Like before, you need to set the innerHTML of the `Clicks per second` line whenever something changes. 
 
 When you're done, your `update()` function should look like this:
 ```JS
@@ -104,20 +102,20 @@ function update() {
 
 ### Step 5
 
-Now our clicksPerSecond value doesn't do anything, we need to add some functionality to allow it to increase our clicks over time, and we also want to see this happening visually without having to do anything.
+Now the `clicksPerSecond` value still doesn't actually do anything yet, you first need to add some functionality to allow it to increase our clicks over time, and you also want to see this happening visually without having to do anything.
 
-We can do this using `setInterval` function.
+This is possible using `setInterval` function.
 
-First, we need to make a `init` function. There's nothing special about the word `init`, all it means is that it will be run once when the page starts.
+First, make a `init` function. There's nothing special about the word `init`, it's usually a term reserved for functions that are only ran when the page loads up.
 
 At the top of your `scripts.js` file, start with adding the following:
 ```JS
 function init() {
-
+	// Code goes here
 }
 ```
 
-And at the very bottom of that file, just add this line:
+Then, at the very bottom of that file, just add this line:
 
 ```JS
 init();
@@ -148,13 +146,14 @@ Congratulations! Your number of `clicks` should now go up faster and faster the 
 
 ## Chapter 3
 
-The idea of clicker games is that you purchase generators to produce more resources so that you can purchase even more generators that produce even more resources et cetera et cetra.
+The general idea of clicker games is that you purchase generators to produce more resources so that you can purchase even more generators that produce even more resources et cetera et cetra. It's a game about exponential growth.
 
-We're going to generalise our Auto Clicker using a `class`, and then making another generator that's both more powerful and expensive.
+We're going to generalise our Auto Clicker using a `class`, and create some functions so our game is more dynamic.
 
 ### Step 1
 
-Make a class:
+Let's define a 'generator' class. This is what represents a generator, and we'll ues this class to make more generators.
+
 ```JS
 class Generator {
     constructor(name, price, power) {
@@ -163,18 +162,24 @@ class Generator {
         this.power = power
         this.quantity = 0
     }
-
-
 }
 ```
+
+### Step 2
+
+You'll also make an object that contains possible generators like so:
+
+```JS
+var generators = [
+    new Generator('Auto Clicker', 10, 1)
+];
+```
+
+What's happening here, is that we've created a class with a `constructor`, a constructor is a function that is called when the class is made. In our `generators` list, we're create a new generator, and telling it that the name is 'Auto Clicker', the price is '10', and it's power is '1'.
 
 ### Step 3
-Change buyAutoClicker
-```JS
-function buyAutoClicker() {
-    clicksPerSecond = clicksPerSecond + 1;
-}
-```
+
+
 
 TODO: Inventory:
 
