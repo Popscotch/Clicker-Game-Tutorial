@@ -179,7 +179,7 @@ function buyAutoClicker() {
         clicksPerSecond = clicksPerSecond + 1;
         clicks = click - 10;
         update();
-	}
+    }
 }
 ```
 
