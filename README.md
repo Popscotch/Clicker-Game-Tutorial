@@ -179,7 +179,7 @@ To make the 'Auto Clicker' cost 10 'clicks', expand the function using an `if` s
 function buyAutoClicker() {
     if (clicks >= 10) {
         clicksPerSecond = clicksPerSecond + 1;
-        clicks = click - 10;
+        clicks = clicks - 10;
         update();
     }
 }
