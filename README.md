@@ -310,6 +310,35 @@ function buyAutoClicker() {
 }
 ```
 
+### Step 5
+
+You might remember that we made a button in `index.html` to purchase an 'Auto Clicker' and that its price was '10 clicks'. Now that we've made the price increase depending on how many you have, we also want to make sure that the button tells us that. In addition, it should tell us how many 'Auto Clickers' we have. Find the the button (It should have `onClick="buyAutoClicker()` inside of it) and replace it with this button instead:
+
+```html
+<button onClick="buyAutoClicker()">Auto Clickers: <span id="autoClickerCount">0</span> <br> <span id="autoClickerPrice">0</span> Clicks</button>
+```
+
+We have 2 `span` elements in this button that we can change using javascript. One for the number of Auto Clickers and one for the cost of the next Auto Clicker.
+
+In `scripts.js` and inside the `update()` function, add the following lines of code so that the player can keep track of their Auto Clickers:
+
+```JS
+document.getElementById("autoClickerCount").innerHTML = generators[0].quantity;
+document.getElementById("autoClickerPrice").innerHTML = price(generators[0]).toFixed(0);
+```
+
+Your update function should look this:
+
+```JS
+function update() {
+    document.getElementById("clickNum").innerHTML = clicks.toFixed(0); // 'toFixed(0)' is used to round the number.
+    document.getElementById("clicksPerSecond").innerHTML = clicksPerSecond;
+
+    document.getElementById("autoClickerCount").innerHTML = generators[0].quantity;
+    document.getElementById("autoClickerPrice").innerHTML = price(generators[0]).toFixed(0);
+}
+```
+
 ---
 
 ## Chapter 4 - Styling the Website and Game
