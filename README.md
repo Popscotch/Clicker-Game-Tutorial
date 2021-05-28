@@ -1,7 +1,5 @@
 # Clicker-Game-Tutorial
 
-Building an Idle Clicker Game
-
 Today we're going to run you through how to create a website and build your very own Clicker Game. 
 
 In order to do this, we're going to use the HTML (Hyper Text Markup Language) and CSS (Cascading Style Sheet) languages to create your website.  Then we're going to build our game in JavaScript, which will make our game interactive. We'll also be introducing you to some tools used by professional programmers every day:  GitHub and Visual Studio Code. 
@@ -9,7 +7,7 @@ In order to do this, we're going to use the HTML (Hyper Text Markup Language) an
 
 To get you started, we've provided you with three files to begin working on your game website. 
 
-Before we can get started coding, we'll need set up the files that we'll be working with on this computer. And if you want to take your work home with you at the end of today, don't worry - we've got a section on that later.
+Before we can get started coding, we'll to need set up the files that we'll be working with on this computer. And if you want to take your work home with you at the end of today, don't worry - we've got a section on that later.
 
 
 Let's begin by downloading the files we need from GitHub.  The've been put in something called a Git repository, which can be found here:
@@ -35,7 +33,7 @@ Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Nex
 
 ![Image](https://github.com/Popscotch/Clicker-Game-Tutorial/blob/070615562e874536c6e8c8f37765302d59f6d6db/Intro%203.png)
 
-The first file we'll be working with is the HTML file called `index.html`.  Click on it in the explorer to open the file.
+Expand the folder named 'src' and you'll see the files we'll be working with today, the first of which is the HTML file called `index.html`.  Click on it in the explorer to open the file.
 
 ---
 
