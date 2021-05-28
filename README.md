@@ -192,7 +192,7 @@ You next need to update the `update()` function so that the page will update whe
 When you're done, your `update()` function should look like this:
 ```JS
 function update() {
-    document.getElementById("numberOfClicks=").innerHTML = clicks; // TODO (MIGHT NOT BE THE RIGHT ID)
+    document.getElementById("clickNum").innerHTML = clicks; // TODO (MIGHT NOT BE THE RIGHT ID)
     document.getElementById("clicksPerSecond").innerHTML = clicksPerSecond;
 }
 ```
@@ -493,11 +493,10 @@ To do so, you can run the bellow command. You would need a [git client](https://
 git clone <url-to-repo>
 ```
 3. Make changes to your files or create new files.
-4. Go back to GIT and type the following command:
+4. Go back to GIT and type the following command. This command will show a diff between the files.
 ```cmd
 git status
 ```
-This command will show a diff between the files.
 5. To mark files for submission ("stage" files), all you have to do is `git add .` (the `.` is to add changed/updated all files in the current directory)
 6. After you have "staged" your files, we can now commit them - this will push the files to your local git repository instance. To do so, run the following:
 ```cmd
