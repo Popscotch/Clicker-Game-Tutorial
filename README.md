@@ -33,42 +33,47 @@ Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Nex
 
 ![Image](https://github.com/Popscotch/Clicker-Game-Tutorial/blob/070615562e874536c6e8c8f37765302d59f6d6db/Intro%203.png)
 
-Expand the folder named 'src' and you'll see the files we'll be working with today, the first of which is the HTML file called `index.html`.  Click on it in the explorer to open the file.
+ All code will be located in the `/src` folder. Expand it now, and we'll see that this folder contains 3 files: `index.html` - the HTML file, `styles.css` - the CSS file and `scripts.js` - the JavaScript file. 
+
+
+, the first of which is the HTML file called `index.html`.  Click on it in the explorer to open the file.
 
 ---
 
 ## Chapter 1 - Game time!
 
-In this chapter we will focus on using HTML and JavaScript to create a stand-alone "clicker" game. Later chapters will walk you through adding additional functionalities to this game!
+In this chapter we'll focus on using HTML and JavaScript to create a stand-alone "clicker" game. Later chapters will walk you through adding additional functionalities to this game!
 
 ### Step 1 - First things first
-Firstly, before we start, you need to understand the file structure. All code will be located in the `/src` folder. The folder has 3 files, `index.html` - the HTML file, `styles.css` - the CSS file and `scripts.js` - the JavaScript file. In this chapter we will be only touching `index.html` and `scripts.js` files.
+In order to see what each piece of code we write does, we need to open our webpage in a browser like Google Chrome or Microsoft Edge. So let's start by opening the 'index.html' file from the folder we saved to our desktop in the section above. 
 
-To start with, open `index.html` with an Internet Browser (ie Edge).
+Now open VS code back up and click on the `index.html` file from the `/src` folder to open it. We also need to do the same with the `scripts.js` file. 
+
+These files are where we'll be writing our code in this chapter. 
 
 ### Step 2 - `let` the fun begin!
 
 The point of the "clicker" game is to have a button which you can click to start with, so lets make one!
 
-Let's create a button below `<h1>My Clicker Game</h1>` tag:
-```html
+In the `index.html` file, let's create a button below the  `<h1>My Clicker Game</h1>` tag using this code:
+```html 
 <button class="clicker" onClick="clicker()">🖱️</button>
 ```
 
 Refresh your page in the browser and you should see a button with a computer-mouse emoji in it.
 
-> NOTE: Clicking on that button will do nothing and produce an error in the console (for now at least). We will fix this later!
+> NOTE: Clicking on that button will do nothing yet and produce an error in the console (for now at least). We will fix this later!
 
-To get that button do something, we can bind an `onClick()` event to it. The `onClick` event will be triggered every time the button is clicked! As you can see, we already done the 'binding' for you, thats `onClick="clicker()"` part. Here we're binding `clicker()` function to be triggered every time the button is clicked. This function will have to be declared in JavaScript.
+To get that button do something, we can bind an `onClick()` event to it. The `onClick` event will be triggered every time the button is clicked! As you can see, we already done the 'binding' for you, that's the `onClick="clicker()"` part. Here we're binding the `clicker()` function to be triggered every time the button is clicked. This function will have to be declared in JavaScript.
 
 ### Step 3 - The JavaScript world
-To start with open `scripts.js` file.
+Next, we'll move to the `scripts.js` file.
 
 > HINT: You can use `console.log()` to dump anything to browser console. Press F12 and select "Console" tab to see the dump.
 
-There are 2 ways to declare a variable in JavaScript. One way is to use `var` and another is to use `let`. There are a few differences between then, but for the purpose of this chapter we will just be using `let`.
+There are 2 ways to declare a variable in JavaScript. One way is to use `var` and another is to use `let`. There are a few differences between them, but for the purpose of this chapter we will just be using `let`.
 
-Before we rash and create the `clicker()` function, lets create a variable to track the number of clicks. For ease sake, let's call variable `clicks`.
+Before we create the `clicker()` function, let's create a variable to track the number of clicks we've made. To make it easy, let's call this variable `clicks`.
 ```js
 let clicks = 0;
 ```
@@ -78,24 +83,23 @@ Now we can make the `clicker()` function to handle the button clicks.
 
 ```js
 function clicker() {
-    clicks = clicks + 1; // increment the global `clicks` variable by 1
+    clicks = clicks + 1; // increments the global `clicks` variable by 1
     console.log("Clicks: " + clicks);
 }
 ```
-*Can you see the number of clicks increasing in the console? If not, then you are did something wrong!*
+*Can you see the number of clicks increasing in the console? If not, then you've made a mistake. Reach out to a demonstrator for help!*
 
 ### Step 4 - Back to HTML
-Seeing number increasing in console is cool and everything BUT how about the page?
+Seeing the number of clicks increasing in the console is cool and everything BUT how about on the page?
 
-Let's make a counter field in HTML and get it to update, shall we?
+Let's make a counter field in our HTML file and get it to update, shall we?
 
-Add the following above the `<button>` code, should look like below:
+Add the following code in your file above the `<button>` code:
 ```html
 <p class="clicks"><span id="clickNum">0</span> clicks</p>
-<button class="clicker" onClick="clicker()">🖱️</button>
 ```
 
-The number still won't update because we're not telling the JavaScript to update it!
+*The number still won't update because we're not telling the JavaScript to update it!*
 
 ### Step 5 - Back to JavaScript
 
@@ -109,7 +113,7 @@ function update(){
 
 Now, we should call this function every time the button is clicked, remember the `clicker()` function?
 
-Update the `clicker()` function to make look like the following:
+Update the `clicker()` function so it looks like the following:
 
 ```js
 function clicker() {
@@ -119,7 +123,7 @@ function clicker() {
 }
 ```
 
-Refresh the page and see. Can you see the number updating on the page?
+Now refresh the webpage in your browser and try clicking on the button again. Can you see the number updating on the page?
 
 ---
 
