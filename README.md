@@ -24,15 +24,16 @@ Click on the green "Code" button
 ### Step 2 
 
 Click on 'Download ZIP' and save it to a location on the desktop.
-![image info](/Intro 1.png)
+![Image](./Intro 1.png)
 
 ### Step 3 
 Unzip the folder.
 
 ### Step 4
-Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Next, navigate to where you un-zipped the folder and open it.  You should now have four files under the explorer window. 
-![image info](/Intro 2.png)
-![image info](/Intro 3.png)
+Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Next, navigate to where you un-zipped the folder and open it.  You should now have four files under the explorer window.
+
+![Image](./Intro 2.png)
+![Image](./Intro 3.png)
 
 The first file we'll be working with is the HTML file called `index.html`.  Click on it in the explorer to open the file.
 
