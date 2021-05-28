@@ -481,36 +481,36 @@ Try it ;)
 
 ### Step 2 - Intoduction to GIT & GitHub
 
-If you are interested in programming/software development lifecycle, then you have most likely heard about GIT at some point. GIT is a version controll system that allows you to easily see the changes done in the code, by whom and when. It gives you the ability to review changes before you merge them to your final product and revoke those changes with ease if they break anything.
+If you are interested in programming/software development lifecycle, then you have most likely heard about GIT at some point. GIT is a version controll system that allows you to easily see the changes made to code, by whom and when. It gives you an ability to review changes before they are merged into the final product and revoke those changes with ease if they break something.
 
 Some smart people already wrote a lot of tutorials on what GIT is and on how to use it. You can find a few of them below:
 * [Into to GIT](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 * [Git handbook](https://guides.github.com/introduction/git-handbook/)
 
 Basically the steps for working with a repository are:
-1. Create repository (essentially a folder for your code). You can use either GitHub or Bitbucket for this.
-2. Clone this repository to your local machine. 
-To do so, you can run the bellow command. You would need a [git client](https://git-scm.com/downloads) for this! 
+1. Create a repository (essentially a folder for your code) if you do not already have one. You can either use GitHub or Bitbucket for this.
+2. Clone this repository to your local computer. 
+To do so, you can run the bellow command in command line (you would need a [git client](https://git-scm.com/downloads) for this!).
 ```cmd
 git clone <url-to-repo>
 ```
 3. Make changes to your files or create new files.
-4. Go back to GIT and type the following command. This command will show a diff between the files.
+4. Go back to command line and type the following command. This command will show a diff between the files.
 ```cmd
 git status
 ```
-5. To mark files for submission ("stage" files), all you have to do is `git add .` (the `.` is to add changed/updated all files in the current directory)
-6. After you have "staged" your files, we can now commit them - this will push the files to your local git repository instance. To do so, run the following:
+5. To mark files for submission (to "stage" files), all you have to do is type `git add .` (the `.` is to add all changed/updated files in the current directory) to GIT for tracking.
+6. After you have staged your files, we can now commit them. This will push/upload the files to your local repository instance (the files will not be uploaded to GitHub/Bitbucket repository just yet). To do so, run the following command:
 ```cmd
-git commit -m "your message here"
+git commit -m "your message here describing your change"
 ```
 7. Now that you commited your changes to your local repository, you can push the changes to GitHub/Bitbucket repository. To do so run the following command:
 ```cmd
 git push
 ```
-8. All done! Now you should see your changes on GitHub/Bucket.
+8. All done! You should now see your changes on GitHub/Bucket.
 
 
-> TIP: If you dislike using a command line, there is a really cool Git App - [SourceTree](https://www.sourcetreeapp.com/)!
+> TIP: If you dislike using a command line, there is a really good Git Application called [SourceTree](https://www.sourcetreeapp.com/)!
 
 Let us know if you need help :)
