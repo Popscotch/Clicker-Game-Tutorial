@@ -68,6 +68,8 @@ To start with open `scripts.js` file.
 
 > HINT: You can use `console.log()` to dump anything to browser console. Press F12 and select "Console" tab to see the dump.
 
+There are 2 ways to declare a variable in JavaScript. One way is to use `var` and another is to use `let`. There are a few differences between then, but for the purpose of this chapter we will just be using `let`.
+
 Before we rash and create the `clicker()` function, lets create a variable to track the number of clicks. For ease sake, let's call variable `clicks`.
 ```js
 let clicks = 0;
@@ -343,41 +345,6 @@ Now you should have the foundations of a clicker game!
 
 Now that we've got our game working, it's time to make it look better. To do this we're going to revisit our styles.css sheet, which tells our browser how each element of our HTML page should be displayed.
 
-### Step 1
-To get us started, copy the below code into the file labelled 'styles.css'. 
-
-```CSS
-html {
-    font-family: "Comic Sans", "Comic Sans", cursive;
-    font-weight: bold;
-    font-size: large;
-}
-
-h1 {
-    text-align: center;
-}
-
-.clicker {
-    font-size: 128px;
-    display: block;
-    margin: auto;
-}
-
-.clicks {
-    text-align: center;
-}
-
-.clicksPerSecond {
-    text-align: center;
-}
-
-.generators {
-    /* display: block; */
-    /* margin: auto; */
-    text-align: center;
-}
-```
-
 Some of the quickest ways you can personalise your website is by changing how the writing looks, so let's update the font style and add some color. 
  
 You might have noticed that in the styles page we gave you there's a section of code that looks like this:
@@ -440,7 +407,7 @@ Don't forget to refresh your browser so you can see the changes you've made!
 
 ## Chapter 5 - Extensions
 
-### Save and Load game
+### Step 1 - Save and Load game
 For saving the game, we will use Local Storage mechanism.
 
 According to Wikipedia, Local Storage (also known as DOM storage) provides web apps with methods and protocols for storing client-side data. It is cross-tab storage, meaning you can save data in one tab and have access to it in another or even after you refresh the page!
@@ -481,8 +448,39 @@ function clearClicks() {
 Try it ;)
 
 
-### GitHub
+### Step 2 - Intoduction to GIT & GitHub
 
-Git is cool!
+If you are interested in programming/software development lifecycle, then you have most likely heard about GIT at some point. GIT is a version controll system that allows you to easily see the changes done in the code, by whom and when. It gives you the ability to review changes before you merge them to your final product and revoke those changes with ease if they break anything.
 
-coming later...
+Some smart people already wrote a lot of tutorials on what GIT is and on how to use it. You can find a few of them below:
+* [Into to GIT](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+* [Git handbook](https://guides.github.com/introduction/git-handbook/)
+
+Basically the steps for working with a repository are:
+1. Create repository (essentially a folder for your code). You can use either GitHub or Bitbucket for this.
+2. Clone this repository to your local machine. 
+To do so, you can run the bellow command. You would need a [git client](https://git-scm.com/downloads) for this! 
+```cmd
+git clone <url-to-repo>
+```
+3. Make changes to your files or create new files.
+4. Go back to GIT and type the following command:
+```cmd
+git status
+```
+This command will show a diff between the files.
+5. To mark files for submission ("stage" files), all you have to do is `git add .` (the `.` is to add changed/updated all files in the current directory)
+6. After you have "staged" your files, we can now commit them - this will push the files to your local git repository instance. To do so, run the following:
+```cmd
+git commit -m "your message here"
+```
+7. Now that you commited your changes to your local repository, you can push the changes to GitHub/Bitbucket repository. To do so run the following command:
+```cmd
+git push
+```
+8. All done! Now you should see your changes on GitHub/Bucket.
+
+
+> TIP: If you dislike using a command line, there is a really cool Git App - [SourceTree](https://www.sourcetreeapp.com/)!
+
+Let us know if you need help :)
