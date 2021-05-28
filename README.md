@@ -205,7 +205,7 @@ function buyAutoClicker() {
 }
 ```
 
-By using `generators[0].price` and `generators[0].power`, you're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating ourselves constantly.
+By using `generators[0].price` and `generators[0].power`, you're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating the values.
 
 ### Step 4
 
@@ -250,6 +250,8 @@ Then, using what you learned from the previous steps you've learned:
 1. Make a new function similar to `buyAutoClicker()` but using the new generator (`generators[1]`) instead of the first one (`generators[0]`).
 2. Make a new button in the `index.html` file, similar to what you did for `buyAutoClicker()`, but instead it should call the new function you just made.
 3. Clicking the button should increase your `clicksPerSecond` by the 'power' of the new generator.
+
+Now you should have the foundations of a clicker game!
 
 ## Chapter 4
 
