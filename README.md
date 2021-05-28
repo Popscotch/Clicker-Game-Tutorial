@@ -239,7 +239,7 @@ Congratulations! Your number of `clicks` should now go up faster and faster the 
 
 ## Chapter 3 - More generators
 
-The general idea of clicker games, is for the player to purchase generators to produce more resources, and use them to buy more generators, and on and on. It's a game about exponential growth.
+The general idea of 'clicker games' is that the player has to purchase generators to produce more resources, and in turn, can purchase even better generators. They're games about exponentially growing numbers.
 
 We're going to generalise our Auto Clicker using a `class`, and create some functions so our game is more dynamic.
 
