@@ -76,7 +76,7 @@ You've made the button, and You've told it to do `buyAutoClicker()` when it is c
 
 ```JS
 function buyAutoClicker() {
-    // empty function
+    // Code goes here
 }
 ```
 
@@ -85,7 +85,7 @@ Whenever that button is pressed, the code within the curly brackets of this func
 ```JS
 function buyAutoClicker() {
     clicksPerSecond = clicksPerSecond + 1;
-	update();
+    update();
 }
 ```
 
@@ -93,10 +93,10 @@ To make the 'Auto Clicker' cost 10 'clicks', expand the function using an `if` s
 
 ```JS
 function buyAutoClicker() {
-	if (clicks >= 10) {
-    	clicksPerSecond = clicksPerSecond + 1;
-		clicks = click - 10;
-		update();
+    if (clicks >= 10) {
+        clicksPerSecond = clicksPerSecond + 1;
+        clicks = click - 10;
+        update();
 	}
 }
 ```
@@ -124,7 +124,7 @@ First, make a `init` function. There's nothing special about the word `init`, it
 At the top of your `scripts.js` file, start with adding the following:
 ```JS
 function init() {
-	// Code goes here
+    // Code goes here
 }
 ```
 
@@ -173,7 +173,6 @@ class Generator {
         this.name = name
         this.price = price
         this.power = power
-        this.quantity = 0
     }
 }
 ```
@@ -206,6 +205,26 @@ function buyAutoClicker() {
 
 By using `generators[0].price` and `generators[0].power`, you're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating ourselves constantly.
 
+### Step 4
+
+See if you can make another new generator, a `Super Clicker` perhaps. To do this, you'll need to do the following:
+
+Firstly, add a new generator to the `generators` list, like so:
+
+```JS
+var generators = [
+    new Generator('Auto Clicker', 10, 1),
+    new Generator('Super Clicker', 100, 10),
+];
+```
+
+(Feel free to set your own values for these)
+
+Then, using what you learned from the previous steps you've learned:
+
+1. Make a new function similar to `buyAutoClicker()` but using the new generator (`generators[1]`) instead of the first one (`generators[0]`).
+2. Make a new button in the `index.html` file, similar to what you did for `buyAutoClicker()`, but instead it should call the new function you just made.
+3. Clicking the button should increase your `clicksPerSecond` by the 'power' of the new generator.
 
 ## Chapter 4
 
