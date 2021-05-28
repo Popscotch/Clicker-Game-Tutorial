@@ -12,20 +12,15 @@ Before we can get started coding, we'll to need set up the files that we'll be w
 Let's begin by downloading the files we need from GitHub.  They have been put in something called a Git repository, which can be found here:
 https://github.com/Popscotch/Clicker-Game-Tutorial
 	
-### Step 1
+### Step 1 - Download our code
 
-Click on the green "Code" button
-
-### Step 2 
-
-Click on 'Download ZIP' and save it to a location on the desktop.
+Click on the green "Code" button. Next, Click on 'Download ZIP' and save it to a location on the desktop.
 
 ![Image](./img/Intro%201.png)
 
-### Step 3 
-Unzip the folder.
+Next, unzip the folder and save it on the desktop.
 
-### Step 4
+### Step 2 - Load our code into VS Code
 Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Next, navigate to where you un-zipped the folder and open it.  You should now have four files under the explorer window.
 
 ![Image](./img/Intro%202.png)
@@ -34,8 +29,6 @@ Open up Visual Studio Code, then click on 'File', followed by 'Open Folder'. Nex
 
  All code will be located in the `/src` folder. Expand it now, and we'll see that this folder contains 3 files: `index.html` - the HTML file, `styles.css` - the CSS file and `scripts.js` - the JavaScript file. 
 
-
-, the first of which is the HTML file called `index.html`.  Click on it in the explorer to open the file.
 
 ---
 
@@ -128,36 +121,36 @@ Now refresh the webpage in your browser and try clicking on the button again. Ca
 
 ## Chapter 2 - Generating more clicks!
 
-Now that you have a button that can increase your 'clicks'. It's time to make something that can help us generate clicks over time without having to trigger ourselves, an "Auto Clicker"!
+Now that you have a button that can increase your 'clicks', it's time to make something that can help us generate more clicks without wearing out our mouse, known an "Auto Clicker"!
 
-### Step 1
+### Step 1 - Counting how many clicks we make!
 
-In the `scripts.js` file, below `let clicks = 0;`, add a new variable that keeps track of our `clicksPerSecond` like so:
+In the `scripts.js` file, let's add a new variable that keeps track of our `clicksPerSecond` like so:
 
 ```js
-let clicks = 0;
+let clicks = 0; //We already have this line
 let clicksPerSecond = 0;
 ```
 
-### Step 2
+### Step 2 - Adding the AutoClicker button in HTML
 
-Next, you need to make a button in your `index.html` file to increase the clicksPerSecond value by 1 each time it is pressed. So add this between the `<body>` tags in your `index.html` file:
+Next, we need make a button in the `index.html` file to increase the clicksPerSecond value by 1 each time it is pressed. So we add this between the `<body>` tags in the `index.html` file:
 
 ```html
 <button onClick="buyAutoClicker()">Buy Auto Clicker - 10 Clicks</button>
 ```
 
-Then you also need to add an element that will tell you what your current `clicksPerSecond` is. Also add this between the `<body>` tags:
+Then we also need to add an element that will say what the current `clicksPerSecond` is by adding the code below between the `<body>` tags:
 
 ```html
 <p>Clicks per second: <span id='clicksPerSecond'>0</span></p>
 ```
 
-This will just look like a single line of text when you view your page, but this way you can use JavaScript to change the `<span>` specifically, rather than the entire line.
+This will just look like a single line of text when we view the page, but this way we can use JavaScript to change the `<span>` specifically, rather than the entire line.
 
-### Step 3
+### Step 3 - Making the AutoClicker work using JavaScript
 
-You've made the button, and told it to do `buyAutoClicker()` when it is clicked with the `onClick` attribute. But you still need to define what `buyAutoClicker()` really does. To do this, go into your `scripts.js` file, and start with adding this at the bottom of the file:
+Now we've made the button, and told it to `buyAutoClicker()` when it's clicked with the `onClick` attribute. But we still need to define what `buyAutoClicker()` really does. To do this, we jump back into the `scripts.js` file, add this at the bottom of the file:
 
 ```JS
 function buyAutoClicker() {
@@ -186,7 +179,7 @@ function buyAutoClicker() {
 }
 ```
 
-### Step 4
+### Step 4 - The update function
 
 Next, let's change the `update()` function to update the page when the `clicksPerSecond` value changes. Like before, you need to set the innerHTML of the `Clicks per second` line whenever something changes. 
 
@@ -198,22 +191,22 @@ function update() {
 }
 ```
 
-### Step 5
+### Step 5 - Putting it all together
 
-Now the `clicksPerSecond` value still doesn't actually do anything yet, you first need to add some functionality to allow it to increase our clicks over time, and you also want to see this happening visually without having to do anything.
+The `clicksPerSecond` value doesn't actually do anything yet, so we need to add some functionality to allow it to increase our clicks over time, and we also want to see this happening visually without having to do anything.
 
 This is possible using the `setInterval` function.
 
-First, make an `init` function. There's nothing special about the word `init`, it's usually a term reserved for functions that are executed when the page loads up.
+First, we make an `init` function. There's nothing special about the word `init`, it's usually a term reserved for functions that are executed when the page loads up.
 
-At the top of your `scripts.js` file, start with adding the following:
+At the top of the `scripts.js` file, start by adding the following:
 ```JS
 function init() {
     // Code goes here
 }
 ```
 
-Then, at the very bottom of that file, just add this line:
+Then, at the very bottom of that file, we add this line:
 
 ```JS
 init();
@@ -246,11 +239,11 @@ Congratulations! Your number of `clicks` should now go up faster and faster the 
 
 ## Chapter 3 - More generators
 
-The general idea of clicker games, is for you to purchase generators to produce more resources. Using these resources you can then purchase even more generators that produce  more resources etc. It's a game about exponential growth.
+The general idea of clicker games, is for the player to purchase generators to produce more resources, and use them to buy more generators, and on and on. It's a game about exponential growth.
 
 We're going to generalise our Auto Clicker using a `class`, and create some functions so our game is more dynamic.
 
-### Step 1
+### Step 1 - Creating a generatory class in JavaScript
 
 Let's define a 'generator' class. This is what represents a generator, and we'll use this class to make more generators.
 
@@ -265,9 +258,9 @@ class Generator {
 }
 ```
 
-### Step 2
+### Step 2 - Creating the generator object
 
-You'll also make an object that contains possible generators like so:
+We also make an object that contains possible generators like so:
 
 ```JS
 let generators = [
@@ -275,11 +268,11 @@ let generators = [
 ];
 ```
 
-What's happening here, is that you've created a class with a `constructor`, a constructor is a function that is called when the class is made. In the `generators` list, it's creating a new generator, and telling it that the name is 'Auto Clicker', the price is '10', and it's power is '1' as per the `constructor` function within the class definition.
+What's happening here, is that you've created a class with a `constructor`. A constructor is a function that is called when the class is made. In the `generators` list, it's creating a new generator, and telling it that the name is 'Auto Clicker', the price is '10', and it's power is '1' as per the `constructor` function within the class definition.
 
 ### Step 3
 
-You'll need to update some of your previous code to make use of these changes. In the code, `generators[0]` represents the first item in the `generators` list. The 0 represents the `index`, and you can refer to other generators you might add by increasing that number. (Such as `generators[1]` for the second item, if there is one)
+We need to update some of the previous code to make use of these changes. In the code, `generators[0]` represents the first item in the `generators` list. The 0 represents the `index`, and can be used to refer to other generators by changing that number (such as `generators[1]` for the second item, if there is one)
 
 ```JS
 function buyAutoClicker() {
@@ -292,11 +285,11 @@ function buyAutoClicker() {
 }
 ```
 
-By using `generators[0].price` and `generators[0].power`, you're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating the values.
+By using `generators[0].price` and `generators[0].power`, we're telling the code to refer to the `price` and `power` characteristics of the Auto Clicker, rather than repeating the values.
 
-### Step 4
+### Step 4 - Changing the generator price
 
-Typically, in idle games, the more you purchase a generator, the more expensive it gets. The best way to do this is to create a function that will tell you the price of a generator. To do that, add this to your `scripts.js` file:
+Typically, in idle games, the more you purchase a generator, the more expensive it gets. The best way to do this is to create a function that will tell you the price of a generator. To do that, add this to the `scripts.js` file:
 
 ```js
 function price(generator) { 
@@ -304,7 +297,7 @@ function price(generator) {
 }
 ```
 
-This function has a parameter that has been named `generator`. To use it, you would do something like `price(generators[0])`. Your `buyAutoClicker()` function can be changed to use it like below, substituting `generators[0].price` for `price(generators[0])`.
+This function has a parameter that has been named `generator`. To use it, you would do something like `price(generators[0])`. The `buyAutoClicker()` function can be changed to use it by substituting `generators[0].price` for `price(generators[0])`.
 
 ```JS
 function buyAutoClicker() {
@@ -317,32 +310,9 @@ function buyAutoClicker() {
 }
 ```
 
-### Step 5
-
-See if you can make another new generator, a `Super Clicker` perhaps. To do this, you'll need to do the following:
-
-Firstly, add a new generator to the `generators` list, like so:
-
-```JS
-var generators = [
-    new Generator('Auto Clicker', 10, 1),
-    new Generator('Super Clicker', 100, 10),
-];
-```
-
-(Feel free to set your own values for these)
-
-Then, using what you learned from the previous steps you've learned:
-
-1. Make a new function similar to `buyAutoClicker()` but using the new generator (`generators[1]`) instead of the first one (`generators[0]`).
-2. Make a new button in the `index.html` file, similar to what you did for `buyAutoClicker()`, but instead it should call the new function you just made.
-3. Clicking the button should increase your `clicksPerSecond` by the 'power' of the new generator.
-
-Now you should have the foundations of a clicker game!
-
 ---
 
-## Chapter 4 - Styling your Website and Game
+## Chapter 4 - Styling the Website and Game
 
 Now that we've got our game working, it's time to make it look better. To do this we're going to revisit our styles.css sheet, which tells our browser how each element of our HTML page should be displayed.
 
@@ -437,8 +407,33 @@ Don't forget to refresh your browser so you can see the changes you've made!
 
 ## Chapter 5 - Extensions
 
-### Step 1 - Save and Load game
-For saving the game, we will utilise Internet Browser's Local Storage mechanism.
+### Step 1 - Adding more generators
+
+Let's see if we can make another new generator, a `Super Clicker` perhaps. To do this, we need to do the following:
+
+Firstly, add a new generator to the `generators` list, like so:
+
+```JS
+var generators = [
+    new Generator('Auto Clicker', 10, 1),
+    new Generator('Super Clicker', 100, 10),
+];
+```
+
+(Feel free to set the values to whatever you want for these)
+
+Then, using what we learned in Chapter 3:
+
+1. Make a new function similar to `buyAutoClicker()` but using the new generator (`generators[1]`) instead of the first one (`generators[0]`).
+2. Make a new button in the `index.html` file, similar to what you did for `buyAutoClicker()`, but instead it should call the new function you just made.
+3. Clicking the button should increase the `clicksPerSecond` by the 'power' of the new generator.
+
+Now we should have the foundations of a clicker game!
+
+---
+
+### Step 2 - Save and Load game
+Let's take things one step further and utilise our Internet Browser's Local Storage mechanism to create a 'Save' and 'Load' function. 
 
 **Local Storage** - (some times also called DOM Storage) provides functionality for saving data on the client-side (within the browser). This means that you can save data in one tab and have access to it in another or even after you refresh the page!
 
@@ -478,7 +473,7 @@ function clearClicks() {
 Try it ;)
 
 
-### Step 2 - Introduction to Git & GitHub
+### Step 3 - Introduction to Git & GitHub
 
 If you are interested in programming/software development life-cycle, then you have most likely heard about Git at some point. Git is a version control system that allows you to easily see the changes made to code, by whom and when. It gives you an ability to review changes before they are merged into the final product and revoke those changes with ease if they break something.
 
