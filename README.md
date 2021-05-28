@@ -99,7 +99,7 @@ Let's create an `update()` function which will update the HTML DOM accordingly!
 
 ```js
 function update(){
-    document.getElementById("clickNum").innerHTML = clicks
+    document.getElementById("clickNum").innerHTML = clicks.toFixed(0); // 'toFixed(0)' is used to round the number.
 }
 ```
 
@@ -186,7 +186,7 @@ Next, let's change the `update()` function to update the page when the `clicksPe
 When you're done, your `update()` function should look like this:
 ```JS
 function update() {
-    document.getElementById("clickNum").innerHTML = clicks;
+    document.getElementById("clickNum").innerHTML = clicks.toFixed(0); // 'toFixed(0)' is used to round the number.
     document.getElementById("clicksPerSecond").innerHTML = clicksPerSecond;
 }
 ```
