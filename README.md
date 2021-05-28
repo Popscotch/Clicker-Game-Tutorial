@@ -4,13 +4,12 @@ Today we're going to run you through how to create a website and build your very
 
 In order to do this, we're going to use the HTML (Hyper Text Markup Language) and CSS (Cascading Style Sheet) languages to create your website.  Then we're going to build our game in JavaScript, which will make our game interactive. We'll also be introducing you to some tools used by professional programmers every day:  GitHub and Visual Studio Code. 
 
-
 To get you started, we've provided you with three files to begin working on your game website. 
 
 Before we can get started coding, we'll to need set up the files that we'll be working with on this computer. And if you want to take your work home with you at the end of today, don't worry - we've got a section on that later.
 
 
-Let's begin by downloading the files we need from GitHub.  The've been put in something called a Git repository, which can be found here:
+Let's begin by downloading the files we need from GitHub.  They have been put in something called a Git repository, which can be found here:
 https://github.com/Popscotch/Clicker-Game-Tutorial
 	
 ### Step 1
@@ -305,7 +304,7 @@ function price(generator) {
 }
 ```
 
-This function has a parameter that has been named `generator`. To use it, you would do something like `price(generators[0])`. Your `buyAutoClicker()` function can be changed to use it like below, subsituting `generators[0].price` for `price(generators[0])`.
+This function has a parameter that has been named `generator`. To use it, you would do something like `price(generators[0])`. Your `buyAutoClicker()` function can be changed to use it like below, substituting `generators[0].price` for `price(generators[0])`.
 
 ```JS
 function buyAutoClicker() {
@@ -479,12 +478,12 @@ function clearClicks() {
 Try it ;)
 
 
-### Step 2 - Intoduction to GIT & GitHub
+### Step 2 - Introduction to Git & GitHub
 
-If you are interested in programming/software development lifecycle, then you have most likely heard about GIT at some point. GIT is a version controll system that allows you to easily see the changes made to code, by whom and when. It gives you an ability to review changes before they are merged into the final product and revoke those changes with ease if they break something.
+If you are interested in programming/software development life-cycle, then you have most likely heard about Git at some point. Git is a version control system that allows you to easily see the changes made to code, by whom and when. It gives you an ability to review changes before they are merged into the final product and revoke those changes with ease if they break something.
 
-Some smart people already wrote a lot of tutorials on what GIT is and on how to use it. You can find a few of them below:
-* [Into to GIT](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+Some smart people already wrote a lot of tutorials on what Git is and on how to use it. You can find a few of them below:
+* [An Intro to Git and GitHub for Beginners (Tutorial)](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 * [Git handbook](https://guides.github.com/introduction/git-handbook/)
 
 Basically the steps for working with a repository are:
@@ -495,16 +494,16 @@ To do so, you can run the bellow command in command line (you would need a [git 
 git clone <url-to-repo>
 ```
 3. Make changes to your files or create new files.
-4. Go back to command line and type the following command. This command will show a diff between the files.
+4. Go back to command line and type the following command. This command will show a difference between the files.
 ```cmd
 git status
 ```
-5. To mark files for submission (to "stage" files), all you have to do is type `git add .` (the `.` is to add all changed/updated files in the current directory) to GIT for tracking.
+5. To mark files for submission (to "stage" files), all you have to do is type `git add .` (the `.` is to add all changed/updated files in the current directory) to Git for tracking.
 6. After you have staged your files, we can now commit them. This will push/upload the files to your local repository instance (the files will not be uploaded to GitHub/Bitbucket repository just yet). To do so, run the following command:
 ```cmd
 git commit -m "your message here describing your change"
 ```
-7. Now that you commited your changes to your local repository, you can push the changes to GitHub/Bitbucket repository. To do so run the following command:
+7. Now that you committed your changes to your local repository, you can push the changes to GitHub/Bitbucket repository. To do so run the following command:
 ```cmd
 git push
 ```
