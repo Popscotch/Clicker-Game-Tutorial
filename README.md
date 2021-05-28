@@ -307,9 +307,9 @@ This function has a parameter that has been named `generator`. To use it, you wo
 
 ```JS
 function buyAutoClicker() {
-    if (clicks >= price(generators[0]) {
+    if (clicks >= price(generators[0])) {
     	clicksPerSecond = clicksPerSecond + generators[0].power;
-        clicks = clicks - price(generators[0];
+        clicks = clicks - price(generators[0]);
         generators[0].quantity++; // This increases 'quantity' by 1
         update();
     }
