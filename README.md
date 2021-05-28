@@ -192,7 +192,7 @@ You next need to update the `update()` function so that the page will update whe
 When you're done, your `update()` function should look like this:
 ```JS
 function update() {
-    document.getElementById("clickNum").innerHTML = clicks; // TODO (MIGHT NOT BE THE RIGHT ID)
+    document.getElementById("clickNum").innerHTML = clicks;
     document.getElementById("clicksPerSecond").innerHTML = clicksPerSecond;
 }
 ```
