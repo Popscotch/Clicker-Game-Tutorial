@@ -129,11 +129,11 @@ Now refresh the webpage in your browser and try clicking on the button again. Ca
 
 ## Chapter 2 - Generating more clicks!
 
-Now that you have a button that can increase your 'clicks', now it's time to make something that can help us generate clicks over time without having to click ourselves, an "Auto Clicker"!
+Now that you have a button that can increase your 'clicks'. It's time to make something that can help us generate clicks over time without having to trigger ourselves, an "Auto Clicker"!
 
 ### Step 1
 
-First, in our `scripts.js` file, and below `let clicks = 0;`, add a new variable that keeps track of our `clicksPerSecond` like so:
+In the `scripts.js` file, below `let clicks = 0;`, add a new variable that keeps track of our `clicksPerSecond` like so:
 
 ```js
 let clicks = 0;
@@ -154,11 +154,11 @@ Then you also need to add an element that will tell you what your current `click
 <p>Clicks per second: <span id='clicksPerSecond'>0</span></p>
 ```
 
-This will just look like a single line of text when you view your page, but this way you can use JavaScript to change the `<span>` specifically, rather than te entire line.
+This will just look like a single line of text when you view your page, but this way you can use JavaScript to change the `<span>` specifically, rather than the entire line.
 
 ### Step 3
 
-You've made the button, and You've told it to do `buyAutoClicker()` when it is clicked with the `onClick` attribute. But you still need to define what `buyAutoClicker()` really does. To do this, go into your `scripts.js` file, and start with adding this at the bottom of the file:
+You've made the button, and told it to do `buyAutoClicker()` when it is clicked with the `onClick` attribute. But you still need to define what `buyAutoClicker()` really does. To do this, go into your `scripts.js` file, and start with adding this at the bottom of the file:
 
 ```JS
 function buyAutoClicker() {
@@ -166,7 +166,7 @@ function buyAutoClicker() {
 }
 ```
 
-Whenever that button is pressed, the code within the curly brackets of this function will be ran. The goal is to increase `clicksPerSecond` so that value can be used to increase `clicks`. Also include the `update()` function, itwill be helpful for later for updating the text on the page itself.
+Whenever that button is pressed, the code within the curly brackets of this function will be executed. The goal is to increase `clicksPerSecond` so that value can be used to increase `clicks`. Also include the `update()` function, it will be helpful for later for updating the text on the page itself.
 
 ```JS
 function buyAutoClicker() {
@@ -189,7 +189,7 @@ function buyAutoClicker() {
 
 ### Step 4
 
-You next need to update the `update()` function so that the page will update when the `clicksPerSecond` value changes. Like before, you need to set the innerHTML of the `Clicks per second` line whenever something changes. 
+Next, let's change the `update()` function to update the page when the `clicksPerSecond` value changes. Like before, you need to set the innerHTML of the `Clicks per second` line whenever something changes. 
 
 When you're done, your `update()` function should look like this:
 ```JS
@@ -203,9 +203,9 @@ function update() {
 
 Now the `clicksPerSecond` value still doesn't actually do anything yet, you first need to add some functionality to allow it to increase our clicks over time, and you also want to see this happening visually without having to do anything.
 
-This is possible using `setInterval` function.
+This is possible using the `setInterval` function.
 
-First, make a `init` function. There's nothing special about the word `init`, it's usually a term reserved for functions that are only ran when the page loads up.
+First, make an `init` function. There's nothing special about the word `init`, it's usually a term reserved for functions that are executed when the page loads up.
 
 At the top of your `scripts.js` file, start with adding the following:
 ```JS
@@ -220,7 +220,7 @@ Then, at the very bottom of that file, just add this line:
 init();
 ```
 
-Whenever the page is loaded, the `init` will execute, and any code inside will be ran. We want to define what should happen every interval (Seconds, milliseconds, etc) when the page is opened. We we will use a `setInterval` function to tell the page to increase `clicks` by `clicksPerSecond` every 1000 milliseconds (1 second).
+Whenever the page is loaded, the `init` will execute, and any code inside will be executed. We want to define what should happen every interval (Seconds, milliseconds, etc) when the page is opened. We we will use a `setInterval` function to tell the page to increase `clicks` by `clicksPerSecond` every 1000 milliseconds (1 second).
 
 ```JS
 function init() {
@@ -247,13 +247,13 @@ Congratulations! Your number of `clicks` should now go up faster and faster the 
 
 ## Chapter 3 - More generators
 
-The general idea of clicker games is that you purchase generators to produce more resources so that you can purchase even more generators that produce even more resources et cetera et cetra. It's a game about exponential growth.
+The general idea of clicker games, is for you to purchase generators to produce more resources. Using these resources you can then purchase even more generators that produce  more resources etc. It's a game about exponential growth.
 
 We're going to generalise our Auto Clicker using a `class`, and create some functions so our game is more dynamic.
 
 ### Step 1
 
-Let's define a 'generator' class. This is what represents a generator, and we'll ues this class to make more generators.
+Let's define a 'generator' class. This is what represents a generator, and we'll use this class to make more generators.
 
 ```JS
 class Generator {
@@ -271,7 +271,7 @@ class Generator {
 You'll also make an object that contains possible generators like so:
 
 ```JS
-var generators = [
+let generators = [
     new Generator('Auto Clicker', 10, 1)
 ];
 ```
