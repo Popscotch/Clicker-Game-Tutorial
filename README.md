@@ -157,7 +157,7 @@ function init() {
 
 Congratulations! Your number of `clicks` should now go up faster and faster the more 'Auto Clickers' you have!
 
-## Chapter 3
+## Chapter 3 - More generators
 
 The general idea of clicker games is that you purchase generators to produce more resources so that you can purchase even more generators that produce even more resources et cetera et cetra. It's a game about exponential growth.
 
@@ -253,8 +253,66 @@ Then, using what you learned from the previous steps you've learned:
 
 Now you should have the foundations of a clicker game!
 
-## Chapter 4
+## Chapter 4 - Styling your Website and Game
 
-TODO: Max's
+Now that we've got our game working, it's time to make it look better. To do this we're going to revisit our styles.css sheet, which tells our browser how each element of our HTML page should be displayed.
+
+Some of the quickest ways you can personalise your website is by changing how the writing looks, so let's update the font style and add some color. 
+ 
+You might have noticed that in the styles page we gave you there's a section of code that looks like this:
+
+```css
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+```
+	
+This piece of code tells the html page which fonts to use. Let's try changing the font-family to something different by typing in the name of a font you want to use.  If you want to use a specific font like Comic sans, you just put the name of the font in twice.
+We can also add the 'font-weight' property which says how thick the individual text is typed on the webpage, or the 'font-size' property which determines how large the text will be on the page.   Your code should now look something like this:
+
+```css
+html {
+    font-family: "Comic Sans", "Comic Sans", cursive;
+    font-weight: bold;
+    font-size: large;
+}
+```
+
+Don't forget to refresh your webpage every time you make a change so you can see what it looks like!
+
+Looking a little better, but this page could really use some colour. 
+ 
+To make our text something other than a basic black, we need to add the 'color' property in the html section.  Warning!  VS Code uses the american spelling of 'color' so be sure to double check that.
+ 
+ There are four ways to specify what colour you want:
+- Name: color: red
+- RGB: color: rgb(255,0,0);
+- HSL: color: hsl(0,100%, 50%);
+- HEX: color: #ff0000;
+ 
+ A list of colours can be found at: https://www.w3schools.com/css/css_colors.asp
+ 
+ ```css
+html {
+    font-family: "Comic Sans", "Comic Sans", cursive;
+    font-weight: bold;
+    font-size: large;
+    color: blue;
+}
+```
+
+That clicker button in the middle could also use some colour!  Only this time we need to change the 'background-color' of the button. 
+ 
+Your code should look like this:
+```css
+.clicker {
+    font-size: 128px;
+    display: block;
+    margin: auto;
+    background-color: rgb(255, 99, 71);
+}
+```
+
+Don't forget to refresh your browser so you can see the changes you've made!
 
 ## Chapter 5 - Extensions
