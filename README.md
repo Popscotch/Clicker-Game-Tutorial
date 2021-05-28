@@ -245,7 +245,7 @@ We're going to generalise our Auto Clicker using a `class`, and create some func
 
 ### Step 1 - Creating a generatory class in JavaScript
 
-Let's define a 'generator' class. This is what represents a generator, and we'll use this class to make more generators.
+Let's define a 'generator' class. This is what represents a generator, and we'll use this class to make more generators. In your `scripts.js` file, add the following code:
 
 ```JS
 class Generator {
@@ -414,7 +414,7 @@ Let's see if we can make another new generator, a `Super Clicker` perhaps. To do
 Firstly, add a new generator to the `generators` list, like so:
 
 ```JS
-var generators = [
+let generators = [
     new Generator('Auto Clicker', 10, 1),
     new Generator('Super Clicker', 100, 10),
 ];
