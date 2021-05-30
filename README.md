@@ -270,7 +270,7 @@ let generators = [
 
 What's happening here, is that you've created a class with a `constructor`. A constructor is a function that is called when the class is made. In the `generators` list, it's creating a new generator, and telling it that the name is 'Auto Clicker', the price is '10', and it's power is '1' as per the `constructor` function within the class definition.
 
-### Step 3
+### Step 3 - Updating the AutoClicker
 
 We need to update some of the previous code to make use of these changes. In the code, `generators[0]` represents the first item in the `generators` list. The 0 represents the `index`, and can be used to refer to other generators by changing that number (such as `generators[1]` for the second item, if there is one)
 
@@ -310,7 +310,7 @@ function buyAutoClicker() {
 }
 ```
 
-### Step 5
+### Step 5 - Putting it all together
 
 You might remember that we made a button in `index.html` to purchase an 'Auto Clicker' and that its price was '10 clicks'. Now that we've made the price increase depending on how many you have, we also want to make sure that the button tells us that. In addition, it should tell us how many 'Auto Clickers' we have. Find the the button (It should have `onClick="buyAutoClicker()` inside of it) and replace it with this button instead:
 
@@ -345,11 +345,12 @@ function update() {
 
 Now that we've got our game working, it's time to make it look better. To do this we're going to revisit our styles.css sheet, which tells our browser how each element of our HTML page should be displayed.
 
-### Step 1
-To get us started, copy the below code into the file labelled 'styles.css'. 
+### Step 1 - Get your style on
+To get us started, copy the below code into the file labelled 'styles.css'. This will tell the website how the clicker and, button and writing should look.
+
 ```CSS
 html {
-    font-family: "Comic Sans", "Comic Sans", cursive;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: large;
 }
@@ -368,13 +369,15 @@ h1 {
     text-align: center;
 }
 .generators {
-    /* display: block; */
-    /* margin: auto; */
+    display: block; 
+    margin: auto;
     text-align: center;
 }
 ```
 
-Some of the quickest ways you can personalise your website is by changing how the writing looks, so let's update the font style and add some color. 
+### Step 2 - Changing the font
+
+Some of the quickest ways you can personalise your website is by changing how the writing looks, so let's update the font style. 
  
 You might have noticed that in the styles page we gave you there's a section of code that looks like this:
 
@@ -396,6 +399,9 @@ html {
 ```
 
 Don't forget to refresh your webpage every time you make a change so you can see what it looks like!
+
+
+### Step 3 - Let's get colourful
 
 Looking a little better, but this page could really use some colour. 
  
@@ -504,7 +510,11 @@ Try it ;)
 
 ### Step 3 - Introduction to Git & GitHub
 
-If you are interested in programming/software development life-cycle, then you have most likely heard about Git at some point. Git is a version control system that allows you to easily see the changes made to code, by whom and when. It gives you an ability to review changes before they are merged into the final product and revoke those changes with ease if they break something.
+If you are interested in programming/software development life-cycle, then you have most likely heard about Git at some point. Git is a version control system that allows you to save your work in the cloud and collaborate with multiple on the same piece of work. Changes can be reviewed before they are merged into the final product and it makes it easy to revoke those changes if they break something. 
+
+Git is a free software, so if you'd like to take your work home today, jump onto their website to create an account: https://github.com/
+
+#### How to use Git and Github
 
 Some smart people already wrote a lot of tutorials on what Git is and on how to use it. You can find a few of them below:
 * [An Intro to Git and GitHub for Beginners (Tutorial)](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
